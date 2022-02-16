@@ -14,3 +14,7 @@ spring:
     url: jdbc:dm://localhost:5236/TEST?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=utf-8
     username: SYSDBA
     password: 123456789
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
