@@ -10,4 +10,7 @@ public interface ApusicTestApi {
 
     @GetMapping("/test")
     public GraceJSONResult getDataList();
+
+    @GetMapping("/testname")
+    public GraceJSONResult getDetail();
 }

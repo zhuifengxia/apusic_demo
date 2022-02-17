@@ -7,4 +7,6 @@ import java.util.List;
 public interface ApusicTestService {
 
     public List<ApusicTest> queryDataList();
+
+    public ApusicTest queryByname(String name);
 }

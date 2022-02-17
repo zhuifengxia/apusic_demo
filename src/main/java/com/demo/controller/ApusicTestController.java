@@ -20,4 +20,10 @@ public class ApusicTestController implements ApusicTestApi {
         List<ApusicTest> datalist = apusicTestService.queryDataList();
         return GraceJSONResult.ok(datalist);
     }
+
+    @Override
+    public GraceJSONResult getDetail() {
+        ApusicTest user=apusicTestService.queryByname("momo");
+        return GraceJSONResult.ok(user);
+    }
 }

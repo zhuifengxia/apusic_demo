@@ -21,4 +21,13 @@ public class ApusicTestServiceImpl implements ApusicTestService {
         List<ApusicTest> datalist=apusicTestMapper.selectByExample(adminExample);
         return datalist;
     }
+
+    @Override
+    public ApusicTest queryByname(String username) {
+        Example adminExample = new Example(ApusicTest.class);
+        Example.Criteria criteria = adminExample.createCriteria();
+        criteria.andEqualTo("username", username);
+        ApusicTest admin = apusicTestMapper.selectOneByExample(adminExample);
+        return admin;
+    }
 }
